@@ -1,0 +1,232 @@
+:root {
+    --truck1animation: 4s;
+    --pieAnimation: 1.5s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.office {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    min-width: 60px;
+    min-height: 60px;
+    top: 10px;
+    left: 88vw;
+}
+
+.truck1 {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    min-width: 60px;
+    min-height: 60px;
+    top: 20px;
+    left: 1vw;
+    opacity: 0;
+}
+
+.truck1Anime {
+    animation: truckMove var(--truck1animation) linear both;
+    /* animation-delay: 9s; */
+}
+
+.truck1Anime2 {
+    animation: truckMove var(--truck1animation) linear both;
+    /* animation-delay: 9s; */
+}
+
+@keyframes truckMove {
+    0% {
+        left: 5vw;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    50% {
+        left: 60vw;
+        opacity: 1;
+    }
+
+    70% {
+        left: 60vw;
+        opacity: 1;
+    }
+
+    100% {
+        left: 60vw;
+        opacity: 0;
+    }
+}
+
+.pie {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+    top: 60px;
+    left: 65vw;
+    transform: scale(0);
+}
+
+.pieAnime {
+    animation: pieMove var(--pieAnimation) linear both;
+    animation-delay: 2.5s;
+}
+
+.pieAnime2 {
+    animation: pieMove var(--pieAnimation) linear both;
+    animation-delay: 2.5s;
+}
+
+@keyframes pieMove {
+    0% {
+        transform: scale(0);
+        left: 68vw;
+    }
+
+    50% {
+        transform: scale(1.5);
+        left: 79vw;
+    }
+
+    100% {
+        left: 90vw;
+        transform: scale(0);
+    }
+}
+
+.truck2 {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    min-width: 60px;
+    min-height: 60px;
+    top: 20px;
+    left: 55vw;
+    opacity: 0;
+}
+
+.truck2Amime {
+    animation: truckMove var(--truck1animation) linear reverse both;
+    animation-delay: var(--truck1animation);
+}
+
+.truck2Amime2 {
+    animation: truckMove var(--truck1animation) linear reverse both;
+    animation-delay: var(--truck1animation);
+}
+
+@media (max-width: 414px) {
+    .pie {
+        top: 20px;
+    }
+
+    .office {
+        left: 82vw;
+    }
+
+    @keyframes truckMove {
+        0% {
+            left: 5vw;
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        50% {
+            left: 45vw;
+            opacity: 1;
+        }
+
+        70% {
+            left: 45vw;
+            opacity: 1;
+        }
+
+        100% {
+            left: 45vw;
+            opacity: 0;
+        }
+    }
+
+    @keyframes pieMove {
+        0% {
+            transform: scale(0);
+            left: 56vw;
+        }
+
+        50% {
+            transform: scale(1.5);
+            left: 67vw;
+        }
+
+        100% {
+            left: 78vw;
+            transform: scale(0);
+        }
+    }
+}
+
+@media (min-width: 568px) and (max-width: 1024px) {
+    .pie {
+        top: 30px;
+    }
+
+    .office {
+        left: 88vw;
+    }
+
+    @keyframes truckMove {
+        0% {
+            left: 5vw;
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 1;
+        }
+
+        50% {
+            left: 55vw;
+            opacity: 1;
+        }
+
+        70% {
+            left: 55vw;
+            opacity: 1;
+        }
+
+        100% {
+            left: 55vw;
+            opacity: 0;
+        }
+    }
+
+    @keyframes pieMove {
+        0% {
+            transform: scale(0);
+            left: 62vw;
+        }
+
+        50% {
+            transform: scale(1.5);
+            left: 74vw;
+        }
+
+        100% {
+            left: 86vw;
+            transform: scale(0);
+        }
+    }
+}
